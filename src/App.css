@@ -1,63 +1,76 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap");
 
-html {
-	font-size: 16px;
+:root {
+	--background-color: #141414;
+	--text-color: #a3a3a3;
 }
 
 body {
 	font-family: "Roboto", sans-serif;
-	height: 100vh;
-	background-color: #fafafa;
-	margin: 0;
+	background-color: var(--background-color);
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
-.app .header {
-	text-align: center;
-	padding: 0.75rem 0 0.75rem 0;
-	background-color: #fff;
-	display: block;
-	box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
-	width: 100%;
+.app {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	margin-bottom: 10rem;
 }
 
 .app .header h1 {
-	font-size: 48px;
-	color: #112838;
+	font-weight: 400;
+	font-size: 36px;
+	color: #cacaca;
 }
 
 .app .conversion {
+	margin-top: 2rem;
 	display: flex;
-	justify-content: center;
 	align-items: center;
-	margin-top: 4rem;
-}
-
-.app .conversion form {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	align-content: center;
-	flex-direction: column;
-	width: 100%;
+	gap: 4rem;
 }
 
 .app .conversion .value form input {
-	width: 40%;
-	padding: 0.5rem;
-	border: none;
+	padding: 0.2rem 0.5rem;
+	border: 0;
+	border-bottom: 0.5px solid var(--text-color);
 	outline: none;
-	border-radius: 4px;
 	text-align: center;
-	color: #112838;
-	font-size: 16px;
+	background-color: var(--background-color);
+	color: #e8f1f7;
+	font-size: 24px;
+}
+
+.app .conversion .value span {
+	position: relative;
+	right: 2.2rem;
+	font-size: 20px;
+	color: var(--text-color);
 }
 
 .app .conversion .answer {
-	padding: 0.5rem;
+	border-bottom: 0.5px solid var(--text-color);
+	padding: 0.2rem 0.5rem;
+	width: 17.262rem;
 }
 
 .app .conversion .answer p {
-	font-size: 16px;
-	color: #112838;
+	font-size: 24px;
 	text-align: center;
+	color: #e8f1f7;
+}
+
+.app .conversion .answer span {
+	font-size: 20px;
+	color: var(--text-color);
+	position: relative;
+	left: 6rem;
+}
+
+@media (max-width: 48.75em) {
 }
