@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import "./App.css";
 
 function App() {
-	const [pixel, setPixel] = useState(0);
 	const [rem, setRem] = useState(0);
 	return (
 		<div className="app">
@@ -17,7 +16,6 @@ function App() {
 							name="px"
 							placeholder="PX"
 							onChange={(e) => {
-								setPixel(e.target.value);
 								setRem((e.target.value / 16).toFixed(2));
 							}}
 						/>
