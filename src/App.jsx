@@ -18,10 +18,9 @@ function App() {
 							placeholder="PX"
 							onChange={(e) => {
 								setPixel(e.target.value);
-								setRem(e.target.value / 16);
+								setRem((e.target.value / 16).toFixed(2));
 							}}
 						/>
-						{console.log(pixel, rem)}
 					</form>
 				</div>
 				<div className="answer">
